@@ -1,0 +1,16 @@
+[
+{
+  "modid": "gyoo",
+  "name": "Grow Your Own : Ores",
+  "description": "Crops that grow ore blocks - simple",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Ethersteel"],
+  "credits": "The Forge and FML guys",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
