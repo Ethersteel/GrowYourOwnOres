@@ -2,5 +2,15 @@
 
 #Items
 
-item.gold_ore_seeds.name=Golden Seeds
-item.iron_ore_seeds.name=Ferrous Seeds
+item.coal_ore_seeds.name=Coal Seeds
+item.diamond_ore_seeds.name=Diamond Seeds
+item.emerald_ore_seeds.name=Emerald Seeds
+item.glowstone_ore_seeds.name=Glowstone Seeds
+item.gold_ore_seeds.name=Gold Seeds
+item.iron_ore_seeds.name=Iron Seeds
+item.lapis_ore_seeds.name=Lapis Seeds
+item.quartz_ore_seeds.name=Quartz Seeds
+item.redstone_ore_seeds.name=Redstone Seeds
+
+#CreativeTab
+itemGroup.gyoo=Grow Your Own : Ores

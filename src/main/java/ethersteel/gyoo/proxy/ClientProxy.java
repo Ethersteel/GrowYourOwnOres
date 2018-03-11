@@ -48,7 +48,9 @@ public class ClientProxy extends ethersteel.gyoo.proxy.CommonProxy {
                 int l = i * 4;
                 return j << 16 | k << 8 | l;
             }
-        }, ModBlocks.IRON_ORE_STEM, ModBlocks.GOLD_ORE_STEM);
+        }, ModBlocks.COAL_ORE_STEM, ModBlocks.DIAMOND_ORE_STEM, ModBlocks.EMERALD_ORE_STEM,
+                ModBlocks.GLOWSTONE_ORE_STEM, ModBlocks.GOLD_ORE_STEM, ModBlocks.IRON_ORE_STEM,
+                ModBlocks.LAPIS_ORE_STEM, ModBlocks.QUARTZ_ORE_STEM, ModBlocks.REDSTONE_ORE_STEM);
     }
 
     @Override
@@ -59,7 +61,7 @@ public class ClientProxy extends ethersteel.gyoo.proxy.CommonProxy {
         {
             public int colorMultiplier(ItemStack stack, int tintIndex)
             {
-                return 1;
+                return 16777215;
             }
         }, ModItems.IRON_ORE_SEEDS, ModItems.GOLD_ORE_SEEDS);
     }

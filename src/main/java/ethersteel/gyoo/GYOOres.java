@@ -20,7 +20,12 @@ public class GYOOres
     public static final String NAME = "Grow Your Own : Ores";
     public static final String VERSION = "1.0";
 
+    @Mod.Instance
+    public static GYOOres instance;
+
     private static Logger logger;
+
+    public static final ModCreativeTab creativeTab = new ModCreativeTab();
 
     @SidedProxy(serverSide = "ethersteel.gyoo.proxy.CommonProxy", clientSide = "ethersteel.gyoo.proxy.ClientProxy")
     public static CommonProxy proxy;
@@ -34,8 +39,6 @@ public class GYOOres
     @EventHandler
     public void init(FMLInitializationEvent event)
     {
-        // some example code
-        //logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
         proxy.registerBlocks();
         proxy.registerItems();
     }

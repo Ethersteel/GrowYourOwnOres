@@ -8,7 +8,6 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
@@ -31,8 +30,15 @@ public class BlockOreStem extends BlockStem {
     @Override
     protected Item getSeedItem()
     {
-        if (this.crop == Blocks.IRON_ORE){return ModItems.IRON_ORE_SEEDS;}
+        if (this.crop == Blocks.COAL_ORE){return ModItems.COAL_ORE_SEEDS;}
+        if (this.crop == Blocks.DIAMOND_ORE){return ModItems.DIAMOND_ORE_SEEDS;}
+        if (this.crop == Blocks.EMERALD_ORE){return ModItems.EMERALD_ORE_SEEDS;}
+        if (this.crop == Blocks.GLOWSTONE){return ModItems.GLOWSTONE_ORE_SEEDS;}
         if (this.crop == Blocks.GOLD_ORE){return ModItems.GOLD_ORE_SEEDS;}
+        if (this.crop == Blocks.IRON_ORE){return ModItems.IRON_ORE_SEEDS;}
+        if (this.crop == Blocks.LAPIS_ORE){return ModItems.LAPIS_ORE_SEEDS;}
+        if (this.crop == Blocks.QUARTZ_ORE){return ModItems.QUARTZ_ORE_SEEDS;}
+        if (this.crop == Blocks.REDSTONE_ORE){return ModItems.REDSTONE_ORE_SEEDS;}
         return null;
     }
 
