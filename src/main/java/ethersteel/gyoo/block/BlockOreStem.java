@@ -3,11 +3,13 @@ package ethersteel.gyoo.block;
 import ethersteel.gyoo.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockStem;
+import net.minecraft.block.properties.PropertyInteger;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
@@ -21,7 +23,9 @@ public class BlockOreStem extends BlockStem {
 
     public BlockOreStem(String name, Block crop) {
         super(crop);
+        this.setDefaultState(this.blockState.getBaseState().withProperty(AGE, Integer.valueOf(0)).withProperty(FACING, EnumFacing.UP));
         this.crop = crop;
+        this.setTickRandomly(true);
         setUnlocalizedName(name);
         setRegistryName(name);
     }
@@ -60,11 +64,5 @@ public class BlockOreStem extends BlockStem {
     {
         int i = state.getValue(AGE) + MathHelper.getInt(worldIn.rand, 1, 2);
         worldIn.setBlockState(pos, state.withProperty(AGE, Math.min(7, i)), 2);
-    }
-
-    @Override
-    protected BlockStateContainer createBlockState()
-    {
-        return new BlockStateContainer(this, AGE, FACING);
     }
 }
