@@ -14,17 +14,20 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
+import net.minecraftforge.common.EnumPlantType;
 
 import javax.annotation.Nullable;
 
 public class BlockOreStem extends BlockStem {
 
     private final Block crop;
+    protected final EnumPlantType plantType;
 
-    public BlockOreStem(String name, Block crop) {
+    public BlockOreStem(String name, Block crop, EnumPlantType plantType) {
         super(crop);
         this.setDefaultState(this.blockState.getBaseState().withProperty(AGE, Integer.valueOf(0)).withProperty(FACING, EnumFacing.UP));
         this.crop = crop;
+        this.plantType = plantType;
         this.setTickRandomly(true);
         setUnlocalizedName(name);
         setRegistryName(name);
@@ -64,5 +67,11 @@ public class BlockOreStem extends BlockStem {
     {
         int i = state.getValue(AGE) + MathHelper.getInt(worldIn.rand, 1, 2);
         worldIn.setBlockState(pos, state.withProperty(AGE, Math.min(7, i)), 2);
+    }
+
+    @Override
+    protected boolean canSustainBush(IBlockState state)
+    {
+        return this.plantType == EnumPlantType.Nether ? state.getBlock() == Blocks.SOUL_SAND : state.getBlock() == Blocks.FARMLAND;
     }
 }
