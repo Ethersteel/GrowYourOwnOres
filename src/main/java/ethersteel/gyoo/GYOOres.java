@@ -1,5 +1,6 @@
 package ethersteel.gyoo;
 
+import ethersteel.gyoo.init.ModLootTables;
 import ethersteel.gyoo.proxy.CommonProxy;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -34,6 +35,7 @@ public class GYOOres
     public void preInit(FMLPreInitializationEvent event)
     {
         logger = event.getModLog();
+        ModLootTables.register();
     }
 
     @EventHandler

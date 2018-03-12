@@ -24,6 +24,7 @@ public class ClientProxy extends ethersteel.gyoo.proxy.CommonProxy {
 
     @Override
     public void registerItems() {
+
         ColorHelper.init(Minecraft.getMinecraft().getBlockColors());
     }
 }
