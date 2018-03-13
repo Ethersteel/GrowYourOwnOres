@@ -14,6 +14,6 @@ public class ModCreativeTab extends CreativeTabs {
 
     @Override
     public ItemStack getTabIconItem() {
-        return new ItemStack(Item.getItemFromBlock(Blocks.EMERALD_ORE));
+        return new ItemStack(ModItems.DIAMOND_ORE_SEEDS);
     }
 }

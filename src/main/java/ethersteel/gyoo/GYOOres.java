@@ -1,10 +1,11 @@
 package ethersteel.gyoo;
 
-import ethersteel.gyoo.init.ModLootTables;
 import ethersteel.gyoo.proxy.CommonProxy;
+import ethersteel.gyoo.utils.LootTableEventHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -35,7 +36,7 @@ public class GYOOres
     public void preInit(FMLPreInitializationEvent event)
     {
         logger = event.getModLog();
-        ModLootTables.register();
+        MinecraftForge.EVENT_BUS.register(new LootTableEventHandler());
     }
 
     @EventHandler
