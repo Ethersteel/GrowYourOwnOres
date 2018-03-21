@@ -53,7 +53,7 @@ public class LootTableEventHandler {
         table.addPool(pool);
     }
 
-    @SubscribeEvent
+    /*@SubscribeEvent
     public void playerHarvestEvent(BlockEvent.HarvestDropsEvent event) {
 
         if(rng.nextInt(100)<=5){
@@ -90,5 +90,5 @@ public class LootTableEventHandler {
 
             }
         }
-    }
+    }*/
 }
